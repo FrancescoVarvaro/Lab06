@@ -7,11 +7,26 @@ public class Rilevamento {
 	private String localita;
 	private Date data;
 	private int umidita;
+	private double umiditaMedia;
 
 	public Rilevamento(String localita, Date data, int umidita) {
 		this.localita = localita;
 		this.data = data;
 		this.umidita = umidita;
+	}
+	
+	public Rilevamento (String localita, Date data, double umiditaMedia) {
+		this.localita = localita;
+		this.data = data;
+		this.umiditaMedia = umiditaMedia;
+	}
+
+	public double getUmiditaMedia() {
+		return umiditaMedia;
+	}
+
+	public void setUmiditaMedia(double umiditaMedia) {
+		this.umiditaMedia = umiditaMedia;
 	}
 
 	public String getLocalita() {
@@ -23,6 +38,7 @@ public class Rilevamento {
 	}
 
 	public Date getData() {
+		
 		return data;
 	}
 
@@ -38,15 +54,15 @@ public class Rilevamento {
 		this.umidita = umidita;
 	}
 
-	// @Override
-	// public String toString() {
-	// return localita + " " + data + " " + umidita;
-	// }
+	 @Override
+	 public String toString() {
+	 return localita + " " + umiditaMedia;
+	 }
 
-	@Override
-	public String toString() {
-		return String.valueOf(umidita);
-	}
+//	@Override
+//	public String toString() {
+//		return String.valueOf(umidita);
+//	}
 
 	
 
